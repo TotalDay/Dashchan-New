@@ -362,7 +362,7 @@ public class ViewUnit {
 			}
 			bumpLimitReached = postItem.getBumpLimitReachedState(chan, postsCount) == PostItem.BumpLimitState.REACHED;
 		}
-		holder.number.setText("#" + postNumber);
+		//holder.number.setText("#" + postNumber); // закоментировал
 		PostState.Predicate.Data stateData = new PostState.Predicate.Data(postItem, configurationSet, bumpLimitReached);
 		for (int i = 0; i < PostState.POST_ITEM_STATES.size(); i++) {
 			boolean visible = PostState.POST_ITEM_STATES.get(i).predicate.apply(stateData);
