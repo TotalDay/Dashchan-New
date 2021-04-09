@@ -366,14 +366,20 @@ public class ViewUnit {
 		PostState.Predicate.Data stateData = new PostState.Predicate.Data(postItem, configurationSet, bumpLimitReached);
 		for (int i = 0; i < PostState.POST_ITEM_STATES.size(); i++) {
 			boolean visible = PostState.POST_ITEM_STATES.get(i).predicate.apply(stateData);
-			holder.stateImages[i].setVisibility(visible ? View.VISIBLE : View.GONE);
+			holder.stateImages[i].setVisibility(visible ? View.VISIBLE : View.GONE); //закоментировал под вопросом
+			// добавлено
+			//if(visible == true)
+			//{
+			//	holder.date.setText(postItem.getDateTime(postDateFormatter));
+			//}
+			//holder.stateImages[i].setVisibility(View.GONE);
 		}
 		viewHolder.itemView.setAlpha(postItem.isDeleted() ? ALPHA_DELETED_POST : 1f);
 
 		CharSequence name = postItem.getFullName(chan);
 		colorScheme.apply(postItem.getFullNameSpans());
 		holder.name.setText(makeHighlightedText(demandSet.highlightText, name));
-		// holder.date.setText(postItem.getDateTime(postDateFormatter)); // закоментировал
+		holder.date.setText(postItem.getDateTime(postDateFormatter)); // закоментировал
 
 		String subject = postItem.getSubject();
 		CharSequence comment = configurationSet.repliesToPost != null
