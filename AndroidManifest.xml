@@ -17,7 +17,7 @@
 
 	<application
 		android:name=".content.MainApplication"
-		android:label="Dashchan mishiranu"
+		android:label="Доски"
 		android:icon="@mipmap/ic_launcher"
 		android:logo="@mipmap/ic_logo"
 		android:theme="@style/Theme.Launcher"
