@@ -373,7 +373,7 @@ public class ViewUnit {
 		CharSequence name = postItem.getFullName(chan);
 		colorScheme.apply(postItem.getFullNameSpans());
 		holder.name.setText(makeHighlightedText(demandSet.highlightText, name));
-		holder.date.setText(postItem.getDateTime(postDateFormatter));
+		// holder.date.setText(postItem.getDateTime(postDateFormatter)); // закоментировал
 
 		String subject = postItem.getSubject();
 		CharSequence comment = configurationSet.repliesToPost != null
@@ -416,7 +416,8 @@ public class ViewUnit {
 				!postItem.isUseDefaultName() && !StringUtils.isEmpty(name);
 		holder.name.setVisibility(showName ? View.VISIBLE : View.GONE);
 		boolean showIndex = postItem.getOrdinalIndex() != PostItem.ORDINAL_INDEX_NONE;
-		holder.index.setVisibility(showIndex ? View.VISIBLE : View.GONE);
+		//holder.index.setVisibility(showIndex ? View.VISIBLE : View.GONE); // закоментировал
+		holder.index.setVisibility(View.GONE); // добавил
 
 		if (demandSet.selection == UiManager.Selection.THREADSHOT) {
 			holder.bottomBarReplies.setVisibility(View.GONE);
