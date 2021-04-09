@@ -118,9 +118,9 @@
 	<string name="display_post_icons">Показывать иконки сообщений</string>
 	<string name="display_post_icons__summary">Иконки доступны в некоторых разделах</string>
 	<string name="do_nothing">Ничего не делать</string>
-	<string name="doesnt_bring_up_thread">Не поднимает тред</string>
+	<string name="doesnt_bring_up_thread">Петушиный вскукарек</string>
 	<string name="domain_name">Доменное имя</string>
-	<string name="dont_bring_up">Не поднимать</string>
+	<string name="dont_bring_up">Пукнуть</string>
 	<string name="dont_install">Не устанавливать</string>
 	<string name="download_completed">Загрузка завершена</string>
 	<string name="download_directory">Директория загрузки</string>
@@ -341,7 +341,7 @@
 	<string name="orientation">Ориентация</string>
 	<string name="original_file_name">Исходное имя файла</string>
 	<string name="original_file_name__summary">Загружать файлы с исходным названием, если возможно</string>
-	<string name="original_poster">Создатель треда</string>
+	<string name="original_poster">Автор треда</string>
 	<string name="paged_board_navigation">Постраничное перелистывание раздела</string>
 	<string name="paged_board_navigation__summary">Не использовать длинный список тредов</string>
 	<string name="pages">Страницы</string>
