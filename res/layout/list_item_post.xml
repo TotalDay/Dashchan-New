@@ -15,6 +15,13 @@
 		android:paddingRight="10dp"
 		android:paddingBottom="4dp">
 
+		<com.mishiranu.dashchan.widget.AttachmentView
+			android:id="@+id/thumbnail"
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:layout_marginEnd="6dp"
+			android:layout_marginRight="6dp" />
+
 		<com.mishiranu.dashchan.widget.LinebreakLayout
 			android:id="@+id/head"
 			android:layout_width="match_parent"
@@ -58,12 +65,7 @@
 				android:singleLine="true"
 				android:ellipsize="end" />
 
-			<com.mishiranu.dashchan.widget.AttachmentView
-				android:id="@+id/thumbnail"
-				android:layout_width="0dp"
-				android:layout_height="match_parent"
-				android:layout_marginEnd="6dp"
-				android:layout_marginRight="6dp" />
+
 
 		</com.mishiranu.dashchan.widget.LinebreakLayout>
 
