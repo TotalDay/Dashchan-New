@@ -25,11 +25,11 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import chan.content.Chan;
-import chan.util.StringUtils;
+
 import com.mishiranu.dashchan.C;
 import com.mishiranu.dashchan.R;
 import com.mishiranu.dashchan.content.ImageLoader;
@@ -55,6 +55,7 @@ import com.mishiranu.dashchan.widget.LinebreakLayout;
 import com.mishiranu.dashchan.widget.PostLinearLayout;
 import com.mishiranu.dashchan.widget.ThemeEngine;
 import com.mishiranu.dashchan.widget.ThreadDescriptionView;
+
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -62,6 +63,9 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+
+import chan.content.Chan;
+import chan.util.StringUtils;
 
 public class ViewUnit {
 	private final UiManager uiManager;
@@ -594,6 +598,9 @@ public class ViewUnit {
 			holder.attachments.setVisibility(View.GONE);
 			holder.attachmentViewCount = 1;
 		}
+
+		holder.attachmentInfo.setVisibility(View.GONE); // добавил
+
 	}
 
 	private void handlePostViewIcons(PostViewHolder holder) {
