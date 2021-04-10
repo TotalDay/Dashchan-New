@@ -1,0 +1,9 @@
+{
+	"base": "dark",
+	"name": "Amoled",
+	"primary": "#ff000000",
+	"accent": "#ffaaaaaa",
+	"quote": "#ff77dd00",
+	"tripcode": "#ff33cc88",
+	"capcode": "#ff66bbff"
+}

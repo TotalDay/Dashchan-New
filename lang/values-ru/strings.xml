@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+	<string name="app_name_multi">Доски</string>
 	<string name="about">О программе</string>
 	<string name="action_on_playback_completion">Действие при завершении воспроизведения</string>
 	<string name="active_scrollbar">Активная полоса прокрутки</string>
