@@ -5,29 +5,33 @@ import android.text.SpannableString;
 import android.text.style.StrikethroughSpan;
 import android.text.style.UnderlineSpan;
 import android.util.Pair;
+
+import com.totalday.dashchannew.content.model.PostNumber;
+import com.totalday.dashchannew.text.HtmlParser;
+import com.totalday.dashchannew.text.style.GainedColorSpan;
+import com.totalday.dashchannew.text.style.HeadingSpan;
+import com.totalday.dashchannew.text.style.ItalicSpan;
+import com.totalday.dashchannew.text.style.LinkSpan;
+import com.totalday.dashchannew.text.style.LinkSuffixSpan;
+import com.totalday.dashchannew.text.style.MediumSpan;
+import com.totalday.dashchannew.text.style.MonospaceSpan;
+import com.totalday.dashchannew.text.style.OverlineSpan;
+import com.totalday.dashchannew.text.style.QuoteSpan;
+import com.totalday.dashchannew.text.style.ScriptSpan;
+import com.totalday.dashchannew.text.style.SpoilerSpan;
+import com.totalday.dashchannew.text.style.TabulationSpan;
+import com.totalday.dashchannew.text.style.UnderlyingSpoilerSpan;
+
+import org.xml.sax.Attributes;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Locale;
+
 import chan.annotation.Extendable;
 import chan.annotation.Public;
 import chan.text.CommentEditor;
 import chan.util.StringUtils;
-import com.mishiranu.dashchan.content.model.PostNumber;
-import com.mishiranu.dashchan.text.HtmlParser;
-import com.mishiranu.dashchan.text.style.GainedColorSpan;
-import com.mishiranu.dashchan.text.style.HeadingSpan;
-import com.mishiranu.dashchan.text.style.ItalicSpan;
-import com.mishiranu.dashchan.text.style.LinkSpan;
-import com.mishiranu.dashchan.text.style.LinkSuffixSpan;
-import com.mishiranu.dashchan.text.style.MediumSpan;
-import com.mishiranu.dashchan.text.style.MonospaceSpan;
-import com.mishiranu.dashchan.text.style.OverlineSpan;
-import com.mishiranu.dashchan.text.style.QuoteSpan;
-import com.mishiranu.dashchan.text.style.ScriptSpan;
-import com.mishiranu.dashchan.text.style.SpoilerSpan;
-import com.mishiranu.dashchan.text.style.TabulationSpan;
-import com.mishiranu.dashchan.text.style.UnderlyingSpoilerSpan;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Locale;
-import org.xml.sax.Attributes;
 
 @Extendable
 public class ChanMarkup implements Chan.Linked {

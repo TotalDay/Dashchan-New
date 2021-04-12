@@ -6,17 +6,13 @@ import android.net.Uri;
 import android.os.CancellationSignal;
 import android.util.Pair;
 import android.util.SparseArray;
-import chan.annotation.Extendable;
-import chan.annotation.Public;
-import chan.content.model.BoardCategory;
-import chan.util.CommonUtils;
-import chan.util.DataFile;
-import chan.util.StringUtils;
-import com.mishiranu.dashchan.R;
-import com.mishiranu.dashchan.content.MainApplication;
-import com.mishiranu.dashchan.content.Preferences;
-import com.mishiranu.dashchan.content.database.ChanDatabase;
-import com.mishiranu.dashchan.util.IOUtils;
+
+import com.totalday.dashchannew.R;
+import com.totalday.dashchannew.content.MainApplication;
+import com.totalday.dashchannew.content.Preferences;
+import com.totalday.dashchannew.content.database.ChanDatabase;
+import com.totalday.dashchannew.util.IOUtils;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -28,6 +24,13 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
+
+import chan.annotation.Extendable;
+import chan.annotation.Public;
+import chan.content.model.BoardCategory;
+import chan.util.CommonUtils;
+import chan.util.DataFile;
+import chan.util.StringUtils;
 
 @Extendable
 public class ChanConfiguration implements Chan.Linked {

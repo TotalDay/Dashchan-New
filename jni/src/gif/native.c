@@ -1,7 +1,7 @@
 #include "gif.h"
 #include "util.h"
 
-#define JCALL(name) Java_com_mishiranu_dashchan_media_GifDecoder_##name
+#define JCALL(name) Java_com_totalday_dashchannew_media_GifDecoder_##name
 
 jlong JCALL(init)(JNIEnv * env, UNUSED jobject this, jstring fileName) {
 	return init(env, fileName);

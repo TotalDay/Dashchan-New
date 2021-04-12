@@ -1,10 +1,13 @@
 package chan.http;
 
 import androidx.annotation.NonNull;
+
+import com.totalday.dashchannew.content.model.ErrorItem;
+
+import java.net.HttpURLConnection;
+
 import chan.annotation.Public;
 import chan.util.StringUtils;
-import com.mishiranu.dashchan.content.model.ErrorItem;
-import java.net.HttpURLConnection;
 
 @Public
 public final class HttpException extends Exception implements ErrorItem.Holder {

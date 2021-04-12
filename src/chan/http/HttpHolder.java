@@ -1,15 +1,18 @@
 package chan.http;
 
 import android.net.Uri;
-import chan.annotation.Public;
-import chan.content.Chan;
-import com.mishiranu.dashchan.content.model.ErrorItem;
+
+import com.totalday.dashchannew.content.model.ErrorItem;
+
 import java.io.Closeable;
 import java.net.Proxy;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
+
+import chan.annotation.Public;
+import chan.content.Chan;
 
 @Public
 public final class HttpHolder {

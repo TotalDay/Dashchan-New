@@ -5,14 +5,17 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.text.SpannableStringBuilder;
 import android.text.style.RelativeSizeSpan;
-import chan.annotation.Extendable;
-import chan.annotation.Public;
-import com.mishiranu.dashchan.C;
-import com.mishiranu.dashchan.text.HtmlParser;
+
+import com.totalday.dashchannew.C;
+import com.totalday.dashchannew.text.HtmlParser;
+
 import java.util.ArrayList;
 import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import chan.annotation.Extendable;
+import chan.annotation.Public;
 
 @Public
 public class StringUtils {

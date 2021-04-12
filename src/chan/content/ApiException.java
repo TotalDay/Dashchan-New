@@ -2,13 +2,16 @@ package chan.content;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import chan.annotation.Public;
-import chan.util.StringUtils;
-import com.mishiranu.dashchan.R;
-import com.mishiranu.dashchan.content.model.ErrorItem;
-import com.mishiranu.dashchan.util.FlagUtils;
+
+import com.totalday.dashchannew.R;
+import com.totalday.dashchannew.content.model.ErrorItem;
+import com.totalday.dashchannew.util.FlagUtils;
+
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
+
+import chan.annotation.Public;
+import chan.util.StringUtils;
 
 @Public
 public final class ApiException extends Exception {

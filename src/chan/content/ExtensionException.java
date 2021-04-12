@@ -1,8 +1,9 @@
 package chan.content;
 
 import androidx.annotation.NonNull;
-import com.mishiranu.dashchan.content.model.ErrorItem;
-import com.mishiranu.dashchan.widget.ClickableToast;
+
+import com.totalday.dashchannew.content.model.ErrorItem;
+import com.totalday.dashchannew.widget.ClickableToast;
 
 public class ExtensionException extends Exception implements ErrorItem.Holder {
 	public ExtensionException(Throwable throwable) {

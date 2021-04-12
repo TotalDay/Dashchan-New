@@ -3,16 +3,15 @@ package chan.http;
 import android.net.Uri;
 import android.util.Base64;
 import android.util.Pair;
+
 import androidx.annotation.NonNull;
-import chan.annotation.Extendable;
-import chan.annotation.Public;
-import chan.content.ExtensionException;
-import chan.util.StringUtils;
-import com.mishiranu.dashchan.content.AdvancedPreferences;
-import com.mishiranu.dashchan.content.Preferences;
-import com.mishiranu.dashchan.content.model.ErrorItem;
-import com.mishiranu.dashchan.content.net.RelayBlockResolver;
-import com.mishiranu.dashchan.util.IOUtils;
+
+import com.totalday.dashchannew.content.AdvancedPreferences;
+import com.totalday.dashchannew.content.Preferences;
+import com.totalday.dashchannew.content.model.ErrorItem;
+import com.totalday.dashchannew.content.net.RelayBlockResolver;
+import com.totalday.dashchannew.util.IOUtils;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayOutputStream;
@@ -37,6 +36,11 @@ import java.util.Random;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import chan.annotation.Extendable;
+import chan.annotation.Public;
+import chan.content.ExtensionException;
+import chan.util.StringUtils;
 
 @Public
 public final class WebSocket {

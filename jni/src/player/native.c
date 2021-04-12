@@ -1,7 +1,7 @@
 #include "player.h"
 #include "util.h"
 
-#define JCALL(name) Java_com_mishiranu_dashchan_media_VideoPlayer_00024Holder_##name
+#define JCALL(name) Java_com_totalday_dashchannew_media_VideoPlayer_00024Holder_##name
 
 jlong JCALL(preInit)(JNIEnv * env, UNUSED jobject this, jint fd) {
 	return preInit(env, fd);

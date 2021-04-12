@@ -21,7 +21,7 @@
 	android:layout_height="wrap_content"
 	android:orientation="horizontal">
 
-    <com.mishiranu.dashchan.widget.AttachmentView
+    <com.totalday.dashchannew.widget.AttachmentView
 		android:id="@+id/thumbnail"
 		android:layout_width="0dp"
 		android:layout_height="0dp"

@@ -8,7 +8,7 @@
 	android:orientation="vertical"
 	android:gravity="center">
 
-	<com.mishiranu.dashchan.widget.AttachmentView
+	<com.totalday.dashchannew.widget.AttachmentView
 		android:id="@+id/thumbnail"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" />

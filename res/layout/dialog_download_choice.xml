@@ -43,7 +43,7 @@
 			android:layout_height="wrap_content"
 			android:text="@string/original_file_name" />
 
-		<com.mishiranu.dashchan.widget.ForcedAutoCompleteTextView
+		<com.totalday.dashchannew.widget.ForcedAutoCompleteTextView
 			android:id="@android:id/text1"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

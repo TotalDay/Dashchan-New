@@ -16,6 +16,10 @@
 
 package chan.http;
 
+import com.totalday.dashchannew.content.model.FileHolder;
+import com.totalday.dashchannew.util.GraphicsUtils;
+import com.totalday.dashchannew.util.IOUtils;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,10 +27,6 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import chan.util.StringUtils;
-
-import com.mishiranu.dashchan.content.model.FileHolder;
-import com.mishiranu.dashchan.util.GraphicsUtils;
-import com.mishiranu.dashchan.util.IOUtils;
 
 public class ChanFileOpenable implements MultipartEntity.Openable {
 	private static final Random RANDOM = new Random(System.currentTimeMillis());

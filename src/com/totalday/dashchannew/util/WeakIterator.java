@@ -1,0 +1,81 @@
+package com.totalday.dashchannew.util;
+
+import java.lang.ref.WeakReference;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
+public class WeakIterator<T, R, N> implements Iterator<N> {
+	private static final Provider<WeakReference<Object>, Object, Object> PROVIDER_IDENTITY =
+			new Provider<WeakReference<Object>, Object, Object>() {
+		@Override
+		public WeakReference<Object> getWeakReference(WeakReference<Object> data) {
+			return data;
+		}
+
+		@Override
+		public Object transform(WeakReference<Object> data, Object referenced) {
+			return referenced;
+		}
+	};
+	private final Iterator<T> iterator;
+	private final Provider<T, R, N> provider;
+	private N next;
+
+	public WeakIterator(Iterator<T> iterator, Provider<T, R, N> provider) {
+		this.iterator = iterator;
+		this.provider = provider;
+	}
+
+	@Override
+	public boolean hasNext() {
+		if (next == null) {
+			while (iterator.hasNext()) {
+				T data = iterator.next();
+				WeakReference<R> reference = provider.getWeakReference(data);
+				R referenced = reference != null ? reference.get() : null;
+				if (referenced != null) {
+					N next = provider.transform(data, referenced);
+					if (next != null) {
+						this.next = next;
+						break;
+					}
+				} else {
+					iterator.remove();
+				}
+			}
+		}
+		if (next == null) {
+			provider.onFinished();
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public N next() {
+		if (!hasNext()) {
+			throw new NoSuchElementException();
+		}
+		N next = this.next;
+		this.next = null;
+		return next;
+	}
+
+	@Override
+	public void remove() {
+		throw new UnsupportedOperationException();
+	}
+
+	public interface Provider<T, R, N> {
+		@SuppressWarnings("unchecked")
+		static <T> Provider<WeakReference<T>, T, T> identity() {
+			return (Provider<WeakReference<T>, T, T>) (Provider<?, ?, ?>) PROVIDER_IDENTITY;
+		}
+
+		WeakReference<R> getWeakReference(T data);
+
+		N transform(T data, R referenced);
+
+		default void onFinished() {}
+	}
+}

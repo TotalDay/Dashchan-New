@@ -1,7 +1,8 @@
 package chan.content.model;
 
+import com.totalday.dashchannew.content.model.PostNumber;
+
 import chan.annotation.Public;
-import com.mishiranu.dashchan.content.model.PostNumber;
 
 @Public
 public final class ThreadSummary {

@@ -20,7 +20,7 @@
 			android:layout_height="wrap_content"
 			android:orientation="vertical">
 
-			<com.mishiranu.dashchan.widget.SafePasteEditText
+			<com.totalday.dashchannew.widget.SafePasteEditText
 				android:id="@+id/name"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -29,7 +29,7 @@
 				android:maxLength="30"
 				android:singleLine="true" />
 
-			<com.mishiranu.dashchan.widget.SafePasteEditText
+			<com.totalday.dashchannew.widget.SafePasteEditText
 				android:id="@+id/email"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -39,7 +39,7 @@
 				android:singleLine="true"
 				tools:ignore="HardcodedText" />
 
-			<com.mishiranu.dashchan.widget.SafePasteEditText
+			<com.totalday.dashchannew.widget.SafePasteEditText
 				android:id="@+id/password"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
 				android:maxLength="30"
 				android:singleLine="true" />
 
-			<com.mishiranu.dashchan.widget.DropdownView
+			<com.totalday.dashchannew.widget.DropdownView
 				android:id="@+id/icon"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content" />
@@ -64,7 +64,7 @@
 
 		</LinearLayout>
 
-		<com.mishiranu.dashchan.widget.SafePasteEditText
+		<com.totalday.dashchannew.widget.SafePasteEditText
 			android:id="@+id/subject"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
 				android:layout_height="wrap_content"
 				android:orientation="horizontal" />
 
-			<com.mishiranu.dashchan.widget.SafePasteEditText
+			<com.totalday.dashchannew.widget.SafePasteEditText
 				android:id="@+id/comment"
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
@@ -107,7 +107,7 @@
 			android:gravity="end"
 			android:visibility="gone" />
 
-		<com.mishiranu.dashchan.widget.CarryLayout
+		<com.totalday.dashchannew.widget.CarryLayout
 			android:id="@+id/checkbox_parent"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -136,7 +136,7 @@
 				android:text="@string/original_poster"
 				android:textAppearance="?android:attr/textAppearanceSmall" />
 
-		</com.mishiranu.dashchan.widget.CarryLayout>
+		</com.totalday.dashchannew.widget.CarryLayout>
 
 		<LinearLayout
 			android:id="@+id/attachment_container"

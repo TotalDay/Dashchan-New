@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-	<string name="app_name_multi">Boards</string>
+	<string name="app_name_multi">DashchanNew</string>
 	<string name="__colon_format">%1$s: %2$s</string>
 	<string name="__enumeration_format">%1$s, %2$s</string>
 	<string name="about">About</string>

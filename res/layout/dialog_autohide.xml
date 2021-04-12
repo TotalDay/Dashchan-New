@@ -34,7 +34,7 @@
 			android:layout_marginLeft="@dimen/dialog_padding_view"
 			android:layout_marginRight="@dimen/dialog_padding_view">
 
-			<com.mishiranu.dashchan.widget.SafePasteEditText
+			<com.totalday.dashchannew.widget.SafePasteEditText
 				android:id="@+id/board_name"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
@@ -44,7 +44,7 @@
 				android:imeOptions="flagNoExtractUi|flagNoFullscreen"
 				android:singleLine="true" />
 
-			<com.mishiranu.dashchan.widget.SafePasteEditText
+			<com.totalday.dashchannew.widget.SafePasteEditText
 				android:id="@+id/thread_number"
 				android:layout_width="0dp"
 				android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
 
 		</LinearLayout>
 
-		<com.mishiranu.dashchan.widget.SafePasteEditText
+		<com.totalday.dashchannew.widget.SafePasteEditText
 			android:id="@+id/value"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -140,7 +140,7 @@
 			android:textSize="14sp"
 			android:singleLine="true" />
 
-		<com.mishiranu.dashchan.widget.SafePasteEditText
+		<com.totalday.dashchannew.widget.SafePasteEditText
 			android:id="@+id/test_string"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"

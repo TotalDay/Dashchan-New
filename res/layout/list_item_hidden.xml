@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mishiranu.dashchan.widget.PostLinearLayout
+<com.totalday.dashchannew.widget.PostLinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:id="@+id/head"
 	android:layout_width="match_parent"
@@ -39,4 +39,4 @@
 		android:tag="theme.textColor=post"
 		android:textSize="12sp" />
 
-</com.mishiranu.dashchan.widget.PostLinearLayout>
+</com.totalday.dashchannew.widget.PostLinearLayout>

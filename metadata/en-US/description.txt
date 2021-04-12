@@ -1,3 +1,4 @@
+* Restyle threads part
 * Supports multiple forums using extensions
 * Threads watcher and reply notifications
 * Automatic filter using regular expressions

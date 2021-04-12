@@ -1,11 +1,13 @@
 package chan.content.model;
 
+import com.totalday.dashchannew.content.model.PostNumber;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
 import chan.annotation.Public;
 import chan.util.CommonUtils;
 import chan.util.StringUtils;
-import com.mishiranu.dashchan.content.model.PostNumber;
-import java.util.ArrayList;
-import java.util.Collection;
 
 @Public
 public final class Post implements Comparable<Post> {
@@ -340,24 +342,14 @@ public final class Post implements Comparable<Post> {
 		return builder.builder.number.compareTo(another.builder.builder.number);
 	}
 
-	private static final class ChanBuilder {
-		public final com.mishiranu.dashchan.content.model.Post.Builder builder =
-				new com.mishiranu.dashchan.content.model.Post.Builder();
-
-		public String threadNumber;
-		public String parentPostNumber;
-		public Attachment[] attachments;
-		public Icon[] icons;
-	}
-
-	public com.mishiranu.dashchan.content.model.Post build() {
+	public com.totalday.dashchannew.content.model.Post build() {
 		if (builder.attachments != null && builder.attachments.length > 0) {
 			builder.builder.attachments = new ArrayList<>();
 			for (Attachment attachment : builder.attachments) {
 				if (attachment instanceof FileAttachment) {
 					FileAttachment fileAttachment = (FileAttachment) attachment;
-					com.mishiranu.dashchan.content.model.Post.Attachment.File file =
-							com.mishiranu.dashchan.content.model.Post.Attachment.File
+					com.totalday.dashchannew.content.model.Post.Attachment.File file =
+							com.totalday.dashchannew.content.model.Post.Attachment.File
 									.createExternal(fileAttachment.getFileUri(), fileAttachment.getThumbnailUri(),
 											fileAttachment.getOriginalName(), fileAttachment.getSize(),
 											fileAttachment.getWidth(), fileAttachment.getHeight(),
@@ -374,8 +366,8 @@ public final class Post implements Comparable<Post> {
 			builder.builder.icons = new ArrayList<>();
 			for (Icon icon : builder.icons) {
 				if (icon != null) {
-					com.mishiranu.dashchan.content.model.Post.Icon postIcon =
-							com.mishiranu.dashchan.content.model.Post.Icon
+					com.totalday.dashchannew.content.model.Post.Icon postIcon =
+							com.totalday.dashchannew.content.model.Post.Icon
 									.createExternal(icon.getUri(), icon.getTitle());
 					if (postIcon != null) {
 						builder.builder.icons.add(postIcon);
@@ -384,5 +376,15 @@ public final class Post implements Comparable<Post> {
 			}
 		}
 		return builder.builder.build(false);
+	}
+
+	private static final class ChanBuilder {
+		public final com.totalday.dashchannew.content.model.Post.Builder builder =
+				new com.totalday.dashchannew.content.model.Post.Builder();
+
+		public String threadNumber;
+		public String parentPostNumber;
+		public Attachment[] attachments;
+		public Icon[] icons;
 	}
 }

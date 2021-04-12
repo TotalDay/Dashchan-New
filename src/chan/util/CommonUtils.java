@@ -3,12 +3,16 @@ package chan.util;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.SystemClock;
-import chan.annotation.Public;
-import com.mishiranu.dashchan.util.Logger;
-import java.lang.reflect.Array;
-import java.util.Collection;
+
+import com.totalday.dashchannew.util.Logger;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.lang.reflect.Array;
+import java.util.Collection;
+
+import chan.annotation.Public;
 
 @Public
 public class CommonUtils {

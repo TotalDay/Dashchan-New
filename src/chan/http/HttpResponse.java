@@ -4,11 +4,14 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.util.Pair;
-import chan.annotation.Public;
-import chan.text.GroupParser;
-import chan.util.StringUtils;
-import com.mishiranu.dashchan.content.model.ErrorItem;
-import com.mishiranu.dashchan.util.IOUtils;
+
+import com.totalday.dashchannew.content.model.ErrorItem;
+import com.totalday.dashchannew.util.IOUtils;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -21,9 +24,10 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+
+import chan.annotation.Public;
+import chan.text.GroupParser;
+import chan.util.StringUtils;
 
 @Public
 public final class HttpResponse {

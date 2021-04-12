@@ -1,7 +1,9 @@
 package chan.http;
 
 import android.net.Uri;
-import com.mishiranu.dashchan.util.IOUtils;
+
+import com.totalday.dashchannew.util.IOUtils;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.Proxy;

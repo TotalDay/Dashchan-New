@@ -7,14 +7,16 @@ import android.net.Uri;
 import android.os.Build;
 import android.provider.DocumentsContract;
 import android.util.Pair;
+
 import androidx.annotation.RequiresApi;
-import chan.annotation.Public;
-import com.mishiranu.dashchan.C;
-import com.mishiranu.dashchan.content.CacheManager;
-import com.mishiranu.dashchan.content.FileProvider;
-import com.mishiranu.dashchan.content.MainApplication;
-import com.mishiranu.dashchan.content.Preferences;
-import com.mishiranu.dashchan.util.MimeTypes;
+
+import com.totalday.dashchannew.C;
+import com.totalday.dashchannew.content.CacheManager;
+import com.totalday.dashchannew.content.FileProvider;
+import com.totalday.dashchannew.content.MainApplication;
+import com.totalday.dashchannew.content.Preferences;
+import com.totalday.dashchannew.util.MimeTypes;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -26,6 +28,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
+
+import chan.annotation.Public;
 
 @Public
 public abstract class DataFile {

@@ -16,20 +16,21 @@
 
 package chan.http;
 
+import com.totalday.dashchannew.content.model.FileHolder;
+import com.totalday.dashchannew.util.MimeTypes;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Random;
 
 import chan.annotation.Extendable;
 import chan.annotation.Public;
 import chan.util.StringUtils;
-
-import com.mishiranu.dashchan.content.model.FileHolder;
-import com.mishiranu.dashchan.util.MimeTypes;
 
 @Extendable
 public class MultipartEntity implements RequestEntity {
@@ -122,7 +123,7 @@ public class MultipartEntity implements RequestEntity {
 
 	@Override
 	public void write(OutputStream output) throws IOException {
-		byte[] boundary = this.boundary.getBytes("ISO-8859-1");
+		byte[] boundary = this.boundary.getBytes(StandardCharsets.ISO_8859_1);
 		for (Part part : parts) {
 			output.write(BYTES_TWO_DASHES);
 			output.write(boundary);
@@ -139,7 +140,7 @@ public class MultipartEntity implements RequestEntity {
 			output.write(BYTES_NEW_LINE);
 			String contentType = part.getContentType();
 			if (contentType != null) {
-				output.write(("Content-Type: " + contentType).getBytes("ISO-8859-1"));
+				output.write(("Content-Type: " + contentType).getBytes(StandardCharsets.ISO_8859_1));
 				output.write(BYTES_NEW_LINE);
 			}
 			output.write(BYTES_NEW_LINE);
@@ -261,10 +262,10 @@ public class MultipartEntity implements RequestEntity {
 	}
 
 	public interface Openable {
-		public String getFileName();
-		public String getMimeType();
-		public InputStream openInputStream() throws IOException;
-		public long getSize();
+		String getFileName();
+		String getMimeType();
+		InputStream openInputStream() throws IOException;
+		long getSize();
 	}
 
 	private static class FileHolderOpenable implements Openable {
@@ -304,6 +305,6 @@ public class MultipartEntity implements RequestEntity {
 	}
 
 	public interface OpenableOutputListener {
-		public void onOutputProgressChange(Openable openable, long progress, long progressMax);
+		void onOutputProgressChange(Openable openable, long progress, long progressMax);
 	}
 }

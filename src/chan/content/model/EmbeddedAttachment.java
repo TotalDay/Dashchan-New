@@ -1,9 +1,11 @@
 package chan.content.model;
 
 import android.net.Uri;
+
+import com.totalday.dashchannew.content.model.Post;
+import com.totalday.dashchannew.content.net.EmbeddedType;
+
 import chan.annotation.Public;
-import com.mishiranu.dashchan.content.model.Post;
-import com.mishiranu.dashchan.content.net.EmbeddedType;
 
 @Public
 public final class EmbeddedAttachment implements Attachment {

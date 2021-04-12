@@ -5,7 +5,25 @@ import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Pair;
+
 import androidx.annotation.NonNull;
+
+import com.totalday.dashchannew.content.model.ErrorItem;
+import com.totalday.dashchannew.content.model.FileHolder;
+import com.totalday.dashchannew.content.model.PostNumber;
+import com.totalday.dashchannew.ui.ForegroundManager;
+import com.totalday.dashchannew.util.GraphicsUtils;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import chan.annotation.Extendable;
 import chan.annotation.Public;
 import chan.content.model.Board;
@@ -23,20 +41,6 @@ import chan.http.HttpValidator;
 import chan.http.MultipartEntity;
 import chan.util.CommonUtils;
 import chan.util.StringUtils;
-import com.mishiranu.dashchan.content.model.ErrorItem;
-import com.mishiranu.dashchan.content.model.FileHolder;
-import com.mishiranu.dashchan.content.model.PostNumber;
-import com.mishiranu.dashchan.ui.ForegroundManager;
-import com.mishiranu.dashchan.util.GraphicsUtils;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 @Extendable
 public class ChanPerformer implements Chan.Linked {
@@ -202,33 +206,6 @@ public class ChanPerformer implements Chan.Linked {
 
 	@Public
 	public static final class ReadThreadsResult {
-		public static class Thread {
-			public final List<com.mishiranu.dashchan.content.model.Post> posts;
-			public final String threadNumber;
-			public final int postsCount;
-			public final int filesCount;
-			public final int postsWithFilesCount;
-
-			public Thread(List<com.mishiranu.dashchan.content.model.Post> posts, String threadNumber,
-					int postsCount, int filesCount, int postsWithFilesCount) {
-				this.posts = posts;
-				this.threadNumber = threadNumber;
-				this.postsCount = postsCount;
-				this.filesCount = filesCount;
-				this.postsWithFilesCount = postsWithFilesCount;
-			}
-		}
-
-		public final List<Thread> threads;
-
-		public int boardSpeed;
-		public HttpValidator validator;
-
-		@Public
-		public ReadThreadsResult(Posts... threads) {
-			this(threads != null ? Arrays.asList(threads) : null);
-		}
-
 		@Public
 		public ReadThreadsResult(Collection<Posts> threads) {
 			List<Thread> list = Collections.emptyList();
@@ -239,7 +216,7 @@ public class ChanPerformer implements Chan.Linked {
 						Post[] postsArray = thread.getPosts();
 						if (postsArray != null) {
 							String threadNumber = null;
-							List<com.mishiranu.dashchan.content.model.Post> posts = new ArrayList<>();
+							List<com.totalday.dashchannew.content.model.Post> posts = new ArrayList<>();
 							for (Post post : postsArray) {
 								if (post != null) {
 									if (posts.isEmpty()) {
@@ -260,6 +237,33 @@ public class ChanPerformer implements Chan.Linked {
 				}
 			}
 			this.threads = list;
+		}
+
+		public final List<Thread> threads;
+
+		public int boardSpeed;
+		public HttpValidator validator;
+
+		@Public
+		public ReadThreadsResult(Posts... threads) {
+			this(threads != null ? Arrays.asList(threads) : null);
+		}
+
+		public static class Thread {
+			public final List<com.totalday.dashchannew.content.model.Post> posts;
+			public final String threadNumber;
+			public final int postsCount;
+			public final int filesCount;
+			public final int postsWithFilesCount;
+
+			public Thread(List<com.totalday.dashchannew.content.model.Post> posts, String threadNumber,
+					int postsCount, int filesCount, int postsWithFilesCount) {
+				this.posts = posts;
+				this.threadNumber = threadNumber;
+				this.postsCount = postsCount;
+				this.filesCount = filesCount;
+				this.postsWithFilesCount = postsWithFilesCount;
+			}
 		}
 
 		@Public
@@ -305,7 +309,7 @@ public class ChanPerformer implements Chan.Linked {
 
 	@Public
 	public static final class ReadPostsResult {
-		public final List<com.mishiranu.dashchan.content.model.Post> posts;
+		public final List<com.totalday.dashchannew.content.model.Post> posts;
 		public final Uri archivedThreadUri;
 		public final int uniquePosters;
 
@@ -329,7 +333,7 @@ public class ChanPerformer implements Chan.Linked {
 		}
 
 		private ReadPostsResult(Collection<Post> posts, Uri archivedThreadUri, int uniquePosters) {
-			List<com.mishiranu.dashchan.content.model.Post> list = Collections.emptyList();
+			List<com.totalday.dashchannew.content.model.Post> list = Collections.emptyList();
 			if (posts != null) {
 				list = new ArrayList<>(posts.size());
 				for (Post post : posts) {

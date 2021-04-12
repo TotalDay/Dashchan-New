@@ -7,17 +7,19 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.SystemClock;
 import android.util.Pair;
+
 import androidx.annotation.NonNull;
-import chan.content.Chan;
-import chan.util.CommonUtils;
-import chan.util.StringUtils;
-import com.mishiranu.dashchan.C;
-import com.mishiranu.dashchan.content.AdvancedPreferences;
-import com.mishiranu.dashchan.content.MainApplication;
-import com.mishiranu.dashchan.content.Preferences;
-import com.mishiranu.dashchan.content.model.ErrorItem;
-import com.mishiranu.dashchan.content.net.RelayBlockResolver;
-import com.mishiranu.dashchan.util.IOUtils;
+
+import com.totalday.dashchannew.C;
+import com.totalday.dashchannew.content.AdvancedPreferences;
+import com.totalday.dashchannew.content.MainApplication;
+import com.totalday.dashchannew.content.Preferences;
+import com.totalday.dashchannew.content.model.ErrorItem;
+import com.totalday.dashchannew.content.net.RelayBlockResolver;
+import com.totalday.dashchannew.util.IOUtils;
+
+import org.brotli.dec.BrotliInputStream;
+
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.ByteArrayInputStream;
@@ -61,6 +63,7 @@ import java.util.zip.GZIPInputStream;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
 import java.util.zip.ZipException;
+
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.HttpsURLConnection;
 import javax.net.ssl.SSLContext;
@@ -69,7 +72,10 @@ import javax.net.ssl.SSLProtocolException;
 import javax.net.ssl.SSLSocket;
 import javax.net.ssl.SSLSocketFactory;
 import javax.net.ssl.X509TrustManager;
-import org.brotli.dec.BrotliInputStream;
+
+import chan.content.Chan;
+import chan.util.CommonUtils;
+import chan.util.StringUtils;
 
 public class HttpClient {
 	private static final int MAX_ATTEMPS_COUNT = 10;

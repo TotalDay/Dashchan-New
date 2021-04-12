@@ -1,12 +1,15 @@
 package chan.content.model;
 
 import android.net.Uri;
-import chan.annotation.Public;
-import chan.util.CommonUtils;
-import com.mishiranu.dashchan.content.database.PagesDatabase;
-import com.mishiranu.dashchan.content.model.PostNumber;
+
+import com.totalday.dashchannew.content.database.PagesDatabase;
+import com.totalday.dashchannew.content.model.PostNumber;
+
 import java.util.Collection;
 import java.util.List;
+
+import chan.annotation.Public;
+import chan.util.CommonUtils;
 
 @Public
 public final class Posts {

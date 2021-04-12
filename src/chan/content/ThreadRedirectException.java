@@ -1,7 +1,8 @@
 package chan.content;
 
+import com.totalday.dashchannew.content.model.PostNumber;
+
 import chan.annotation.Public;
-import com.mishiranu.dashchan.content.model.PostNumber;
 
 // TODO CHAN
 // Remove this class after updating

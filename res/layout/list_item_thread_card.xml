@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.mishiranu.dashchan.widget.PostLinearLayout
+<com.totalday.dashchannew.widget.PostLinearLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	android:layout_width="match_parent"
 	android:layout_height="wrap_content"
@@ -13,7 +13,7 @@
 		android:paddingLeft="10dp"
 		android:paddingRight="10dp">
 
-		<com.mishiranu.dashchan.widget.AttachmentView
+		<com.totalday.dashchannew.widget.AttachmentView
 			android:id="@+id/thumbnail"
 			android:layout_width="64dp"
 			android:layout_height="64dp"
@@ -71,7 +71,7 @@
 		android:paddingRight="10dp"
 		android:background="?android:attr/selectableItemBackground">
 
-		<com.mishiranu.dashchan.widget.ThreadDescriptionView
+		<com.totalday.dashchannew.widget.ThreadDescriptionView
 			android:id="@+id/thread_description"
 			android:layout_width="0dp"
 			android:layout_height="wrap_content"
@@ -81,4 +81,4 @@
 
 	</LinearLayout>
 
-</com.mishiranu.dashchan.widget.PostLinearLayout>
+</com.totalday.dashchannew.widget.PostLinearLayout>

@@ -16,20 +16,20 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.DisplayMetrics;
 import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.core.content.pm.PackageInfoCompat;
-import chan.util.StringUtils;
-import com.mishiranu.dashchan.C;
-import com.mishiranu.dashchan.R;
-import com.mishiranu.dashchan.content.MainApplication;
-import com.mishiranu.dashchan.content.Preferences;
-import com.mishiranu.dashchan.graphics.ChanIconDrawable;
-import com.mishiranu.dashchan.media.VideoPlayer;
-import com.mishiranu.dashchan.util.AndroidUtils;
-import com.mishiranu.dashchan.util.Hasher;
-import com.mishiranu.dashchan.util.WeakObservable;
-import dalvik.system.DelegateLastClassLoader;
-import dalvik.system.PathClassLoader;
+
+import com.totalday.dashchannew.C;
+import com.totalday.dashchannew.R;
+import com.totalday.dashchannew.content.MainApplication;
+import com.totalday.dashchannew.content.Preferences;
+import com.totalday.dashchannew.graphics.ChanIconDrawable;
+import com.totalday.dashchannew.media.VideoPlayer;
+import com.totalday.dashchannew.util.AndroidUtils;
+import com.totalday.dashchannew.util.Hasher;
+import com.totalday.dashchannew.util.WeakObservable;
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -44,6 +44,10 @@ import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.regex.Pattern;
+
+import chan.util.StringUtils;
+import dalvik.system.DelegateLastClassLoader;
+import dalvik.system.PathClassLoader;
 
 public class ChanManager {
 	public static final int MAX_VERSION = 1;
@@ -778,7 +782,7 @@ public class ChanManager {
 	private static final ExtensionsIterable.FilterMap<ExtensionItem> FILTER_MAP_EXTENSION_ITEMS
 			= extension -> extension.item;
 	private static final ExtensionsIterable.FilterMap<Chan> FILTER_MAP_AVAILABLE_CHAN_NAMES
-			= extension -> extension.chan != null ? extension.chan : null;
+			= extension -> extension.chan;
 
 	public Iterable<ExtensionItem> getExtensionItems() {
 		return new ExtensionsIterable<>(extensions.values(), FILTER_MAP_EXTENSION_ITEMS);

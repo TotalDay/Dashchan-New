@@ -3,18 +3,21 @@ package chan.content;
 import android.net.Uri;
 import android.os.Parcel;
 import android.os.Parcelable;
-import chan.annotation.Extendable;
-import chan.annotation.Public;
-import chan.util.CommonUtils;
-import chan.util.StringUtils;
-import com.mishiranu.dashchan.C;
-import com.mishiranu.dashchan.content.Preferences;
-import com.mishiranu.dashchan.content.model.PostNumber;
+
+import com.totalday.dashchannew.C;
+import com.totalday.dashchannew.content.Preferences;
+import com.totalday.dashchannew.content.model.PostNumber;
+
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import chan.annotation.Extendable;
+import chan.annotation.Public;
+import chan.util.CommonUtils;
+import chan.util.StringUtils;
 
 @Extendable
 public class ChanLocator implements Chan.Linked {

@@ -43,7 +43,7 @@
 
 	</FrameLayout>
 
-	<com.mishiranu.dashchan.widget.SafePasteEditText
+	<com.totalday.dashchannew.widget.SafePasteEditText
 		android:id="@+id/captcha_input"
 		android:layout_width="0dp"
 		android:layout_height="wrap_content"

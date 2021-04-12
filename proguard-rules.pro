@@ -1,3 +1,3 @@
 -dontobfuscate
--keep class com.mishiranu.dashchan.** { *; }
+-keep class com.totalday.dashchannew.** { *; }
 -keep class chan.** { *; }

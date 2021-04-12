@@ -1,8 +1,10 @@
 package chan.content;
 
 import androidx.annotation.NonNull;
+
+import com.totalday.dashchannew.content.model.ErrorItem;
+
 import chan.annotation.Public;
-import com.mishiranu.dashchan.content.model.ErrorItem;
 
 @Public
 public final class InvalidResponseException extends Exception implements ErrorItem.Holder {
